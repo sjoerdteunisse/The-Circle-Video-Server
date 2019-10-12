@@ -1,0 +1,61 @@
+{
+  "name": "the-circle",
+  "version": "0.1.0",
+  "description": "server for the circle-application",
+  "main": "server.js",
+  "engines": {
+    "node": "^10.13.0",
+    "npm": "^6.4.1"
+  },
+  "scripts": {
+    "start": "node webserver.js",
+    "test": "mocha --reporter spec ./back_end_server/test/**/*.js --exit",
+    "dev": "mocha --reporter spec ./back_end_server/test/unitTests/*.js --exit"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "TheCircle",
+  "license": "ISC",
+  "dependencies": {
+    "chai-as-promised": "^7.1.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.0.0",
+    "chromedriver": "^75.0.0",
+    "crypto": "^1.0.1",
+    "decimal.js": "^10.2.0",
+    "du": "^0.1.0",
+    "ejs": "2.5.x",
+    "express": "^4.16.4",
+    "ffmpeg-respawn": "^0.1.2",
+    "ffmpeg-static": "^2.4.0",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.4.0",
+    "mocha": "^5.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "mp4frag": "^0.1.1",
+    "mysql2": "^1.6.4",
+    "net": "^1.0.2",
+    "nodemon": "^1.18.7",
+    "pipe2jpeg": "^0.2.7",
+    "request": "^2.88.0",
+    "rimraf": "^2.6.3",
+    "selenium-webdriver": "^4.0.0-alpha.3",
+    "sequent": ">= 0.1.2",
+    "server": "^1.0.18",
+    "sinon": "^7.3.2",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.0.0",
+    "eslint": "^5.16.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.7"
+  }
+}

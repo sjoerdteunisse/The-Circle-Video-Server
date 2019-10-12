@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Home | The Circle</title>
+  <link rel="shortcut icon" type="image/png" href="/img/the_circle_logo.png"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="/js/jsencrypt.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/script.js"></script>
+  <link rel="import" href="/html/header.html">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</head>
+
+<body id="mainBody">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" style="margin-bottom: 0px">
+        <a href="#" class="navbar-brand">
+            <img class="nav-logo" src="/img/the_circle_logo.png" height="40" alt="The Circle">
+            <span>The Circle</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="/stream" class="nav-item nav-link menu-item active">Home</a>
+                <a id="streamOverview" href="/stream/streamoverview" class="nav-item nav-link menu-item">Streams</a>
+            </div>
+            <div class="navbar-nav float-right mr-5">
+                <a href="#" onclick="logout()" class="nav-item nav-link">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="outer-text-center-div">
+            <div class="text-center">
+                <img class="nav-logo" src="/img/the_circle_logo_2.png"
+                    height="150" alt="The Circle">
+                <h1 style="font-size: 50px">The Circle</h1>      
+                <p style="font-size: 20px"> The platform to lose your privacy and get paid for it.</p>
+                <br>
+                <p> Start streaming and lose your privacy with the app! </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var is_chrome = /chrome/.test( navigator.userAgent.toLowerCase() );
+    if(!is_chrome){
+        alert('this website can only be used with chrome');
+    }
+  checkPermission();
+</script>
+<script src="js/script.js"></script>
+</html>

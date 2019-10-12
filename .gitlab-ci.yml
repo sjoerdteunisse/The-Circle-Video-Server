@@ -1,0 +1,19 @@
+image: node:latest
+
+stages:
+  - test
+
+# 
+# Testing nodejes backend
+# 
+test server:
+  image: node:carbon
+  stage: test
+  services:
+    - docker:dind
+  before_script:
+    - npm install -g
+  script:
+    - npm run dev
+  only:
+    - master

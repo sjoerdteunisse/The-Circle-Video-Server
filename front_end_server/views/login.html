@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login | The Circle</title>
+  <link rel="shortcut icon" type="image/png" href="/img/the_circle_logo.png"/>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jsencrypt.min.js"></script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+</head>
+<link rel="import" href="/html/header.html">
+<body id="login">
+    <div class="login-container">
+        <div class="max-width">
+            <div class="logo flex-center flex- animated zoomIn">
+              <img class="mb-4 logo-login" src="/img/the_circle_logo_2.jpg" alt="logo"/>
+            </div>
+            <div class="login-details">
+              <div class="input-box animated  fadeInRight"><input type="text" id="txtphonenr" name="phonenr" placeholder="Phonenumber" class="flex-1"></div>
+              <div class="input-box animated  fadeInLeft mt-3"><textarea cols="40" rows="3" type="text" name="privkey" id="txtprivatekey" placeholder="Private Key" class="flex-1"></textarea></div>
+              <p id="loginError" class="errortext d-none">Phonenumber and private key does not match</p>
+              <div class="qr-text"><span>Show your QR code from the app in the webcam</span></div>
+              <div><video class="video-scanner" id="preview"></video></div>
+              <div class="lg-btn d-flex flex-1 animated  fadeInRight" style="text-align: -webkit-center;"><input id="trueYouLogin" type="submit" class="flex-1" value="Log in" onClick="authenticate();"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+  areWeLoggedIn();
+  var is_chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+  if (!is_chrome) {
+    alert('only chrome is supported');
+  }
+  scanner();
+</script>
+</html>
