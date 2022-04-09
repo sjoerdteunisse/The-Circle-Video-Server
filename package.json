@@ -34,7 +34,7 @@
     "jsonwebtoken": "^8.4.0",
     "mocha": "^5.2.0",
     "lodash.clonedeep": "^4.5.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "morgan": "^1.9.1",
     "mp4frag": "^0.1.1",
     "mysql2": "^1.6.4",
