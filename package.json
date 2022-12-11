@@ -27,7 +27,7 @@
     "decimal.js": "^10.2.0",
     "du": "^0.1.0",
     "ejs": "2.5.x",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "ffmpeg-respawn": "^0.1.2",
     "ffmpeg-static": "^2.4.0",
     "http": "0.0.0",
